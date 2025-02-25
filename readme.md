@@ -104,9 +104,10 @@ A la fin de l'installation, si vous entrez l'ip de votre serveur dans le navigat
 ![msqli1](msqli1.png "msqli1")
 ![msqli2](msqli2.png "msqli2")
 
-ℹ️ Pour tester si l'installation de MariaDB s'est exécutée correctement, il faut s'y connecter avec la commande : `mysql -u root -p`.
+
+- ℹ️ Pour tester si l'installation de MariaDB s'est exécutée correctement, il faut s'y connecter avec la commande : `mysql -u root -p`.
 ‼️ Il faut bien utiliser ici "root", et non debian ou autre. Il s'agit de l'utilisateur base de donnée et non celui de votre machine.
-ℹ️ Le mot de passe est vide. Quand on vous le demande, ne mettez rien et tapez sur "entrer".
-ℹ️ pour ceux qui ont le message "access denied", mettez "sudo" devant votre commande : `sudo mysql -u root -p`.
+- ℹ️ Le mot de passe est vide. Quand on vous le demande, ne mettez rien et tapez sur "entrer".
+- ℹ️ pour ceux qui ont le message "access denied", mettez "sudo" devant votre commande : `sudo mysql -u root -p`.
 
 ![mariatest](mariatest.png "mariatest")
