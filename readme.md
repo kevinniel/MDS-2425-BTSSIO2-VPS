@@ -13,6 +13,8 @@ eliane.perol.angers.mds-project.fr    31.207.38.82    H64yPZYBH7l
 - sur windobe (putty) : https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 - sur noyaux unix -> CLI (déjà dispo)
 
+ℹ️ sur windows, pour coller un contenu que vous avez copier depuis votre ordi, utilisez le clic droit. Pensez à positionner le curseur om vous le souhaitez avant.
+
 ## Connexion au ssh
 
 - les users "superadmin" s'apellent en général "root".
