@@ -196,22 +196,13 @@ server {
 
 }
 
-- activer le fichier de configuration en créant un lien symbolique : `ln -s btspma.kevinniel.fr.conf ../sites-enabled/`
-
+- activer le fichier de configuration en créant un lien symbolique : `sudo ln -s /etc/nginx/sites-available/btspma.kevinniel.fr.conf /etc/nginx/sites-enabled/`
+- Vérifier que ça fonctionne avec `sudo nginx -t`, qui doit afficher : 
+```
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+```
+- redémarrer le service nginx : `sudo service nginx restart`
 
 
 ```
-
-
-
-
-------------
-
-
-
-
-
-Configurer nginx pour qu'il aille lire par défaut les fichiers `.php` : `sudo nano /etc/nginx/sites-available/default`
-
-Remplacer la ligne `index index.html index.htm index.nginx-debian.html;` par `index index.html index.htm index.php index.nginx-debian.html;`
-Redemarrez le service nginx pour prendre en compte les modifications : `sudo service nginx restart`
