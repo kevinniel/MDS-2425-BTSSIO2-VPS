@@ -25,6 +25,9 @@ eliane.perol.angers.mds-project.fr    31.207.38.82    H64yPZYBH7l
 - Ne pas toucher au port "22"
 - renseigner l'adresse IP (v4) de votre serveur dans la barre prévue à cet effet :
 ![Putty](putty.png "Putty")
+- Appuyez sur "open"
+- renseignez le user (debian / root etc...) et le mot de passe
+![Putty2](putty2.png "Putty2")
 
 
 ### CLI
