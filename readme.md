@@ -64,7 +64,15 @@ alias ......='cd ../../../../../..'
 ℹ️ `nano` est un éditeur de texte (IDE) en CLI. Le menu de navigation des commandes de nano est en bas de l'écran. Le symbole `^` correspond à votre touche de clavier "control". 
 ![nano](nano.png "nano")
 
-## Installer le serveur web 
+## Installer le serveur web
+
+ℹ️ Il est possible de chaîner les commandes CLI en les séparants par les symboles ```&&```
+
+### Mettre à jour les paquets du serveur
+
+```
+sudo apt update && sudo apt upgrade -y
+```
 
 ### Nginx
 
