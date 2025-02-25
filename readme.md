@@ -168,6 +168,7 @@ ATTENTION, ICI TOUS LES CODES SONT SPÉCIFIQUE À MON CAS DE FIGURE. PENSEZ À A
 
 ℹ️ `$fulldomain` correspond à l'url d'entrée dans votre application. si c'est "toto.fr", alors remplacez le par "toto.fr". Si c'est "pma.toto.fr", remplacez le par "pma.toto.fr".
 ℹ️ `$fulldomain.conf` est souvent utilisé comme nom de fichier de conf.
+‼️ Vous devez virer le symbole `$` !!!
 
 ```
 server {
