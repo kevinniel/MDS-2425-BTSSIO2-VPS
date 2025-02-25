@@ -85,7 +85,9 @@ C'est notre serveur web, qui va exécuter le code web. (c'est pareil que MAMP, W
 - Installation : `sudo apt install nginx -y`
 - autoriser nginx : `sudo systemctl enable nginx`
 - lancer nginx : `sudo systemctl start nginx`
-- vérifier le statut de nginx : `sudo systemctl status nginx`
+- vérifier le statut de nginx : `sudo systemctl status nginx` (tout doit être en vert)
+
+![nginxstatus](nginxstatus.png "nginxstatus")
 
 ### Base de données
 
