@@ -94,3 +94,8 @@ C'est notre serveur web, qui va exécuter le code web. (c'est pareil que MAMP, W
 - Installation de MariaDB (= MySQL) : `sudo apt install mariadb-server mariadb-client -y`
 - Sécuriser la BDD : `sudo mysql_secure_installation`
 
+ℹ️ Le mot de passe de base de l'utilisateur `root` est : `` (vide, rien, nada...)
+ℹ️ Lorsqu'il n'y a rien sur les screens en dessous, c'est qu'il ne faut rien mettre 😇
+
+![msqli1](msqli1.png "msqli1")
+![msqli2](msqli2.png "msqli1")
