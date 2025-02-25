@@ -30,6 +30,8 @@ eliane.perol.angers.mds-project.fr    31.207.38.82    H64yPZYBH7l
 - renseignez le user (debian / root etc...) et le mot de passe
 ![Putty2](putty2.png "Putty2")
 
+ℹ️ Parfois Putty plante. Le titre de l'application verra "(inactive)" apparaître. Si ça vous arrive, relancez putty (ou achetez un mac 💻)
+
 
 ### CLI
 
