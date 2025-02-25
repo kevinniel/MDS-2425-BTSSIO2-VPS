@@ -76,7 +76,14 @@ sudo apt update && sudo apt upgrade -y
 
 ### Nginx
 
+C'est notre serveur web, qui va exécuter le code web. (c'est pareil que MAMP, WAMP, XAMPP, Laragon etc...)
+
 - Installation : `sudo apt install nginx -y`
 - autoriser nginx : `sudo systemctl enable nginx`
 - lancer nginx : `sudo systemctl start nginx`
 - vérifier le statut de nginx : `sudo systemctl status nginx`
+
+
+### Base de données
+
+Installation de MariaDB (= MySQL) : `sudo apt install mariadb-server mariadb-client -y`
