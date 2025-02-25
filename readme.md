@@ -109,5 +109,6 @@ A la fin de l'installation, si vous entrez l'ip de votre serveur dans le navigat
 ‼️ Il faut bien utiliser ici "root", et non debian ou autre. Il s'agit de l'utilisateur base de donnée et non celui de votre machine.
 - ℹ️ Le mot de passe est vide. Quand on vous le demande, ne mettez rien et tapez sur "entrer".
 - ℹ️ pour ceux qui ont le message "access denied", mettez "sudo" devant votre commande : `sudo mysql -u root -p`.
+- ℹ️ pour quitter l'interface "mysql", tapez la commande : `exit;`
 
 ![mariatest](mariatest.png "mariatest")
