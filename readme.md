@@ -131,3 +131,18 @@ A la fin de l'installation, si vous entrez l'ip de votre serveur dans le navigat
 - `sudo rm -rf /etc/apache2`
 - `sudo apt autoremove -y`
 - `sudo apt autoclean`
+
+### Installer PhpMyAdmin
+
+On va prendre le lien de téléchargement du PHP et le télécharger.
+
+- se positionner dans le dossier à la racine du serveur web : `cd /var/www/html`
+- télécharger le dossier zippé : `wget https://files.phpmyadmin.net/phpMyAdmin/5.2.2/phpMyAdmin-5.2.2-all-languages.zip`
+- dézipper le fichier : `unzip phpMyAdmin-5.2.2-all-languages.zip`
+- virer le .zip : `rm phpMyAdmin-5.2.2-all-languages.zip`
+- renommer le dossier en phpMyAdmin : `mv phpMyAdmin-5.2.2-all-languages/ phpMyAdmin`
+
+Configurer nginx pour qu'il aille lire par défaut les fichiers `.php` : `sudo nano /etc/nginx/sites-available/default`
+
+Remplacer la ligne `index index.html index.htm index.nginx-debian.html;` par `index index.html index.htm index.php index.nginx-debian.html;`
+Redemarrez le service nginx pour prendre en compte les modifications : `sudo service nginx restart`
