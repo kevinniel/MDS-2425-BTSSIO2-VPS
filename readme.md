@@ -204,8 +204,16 @@ server {
     location ~ /\.(?!well-known).* {
         deny all;
     }
-
 }
+
+ℹ️ Si vous avez une erreur du type "unknown directive mode=block", commentez ou supprimez le bloc suivant du fichier de conf nginx : 
+```
+    # Security / XSS Mitigation Headers
+    add_header X-Frame-Options \"SAMEORIGIN\";
+    add_header X-XSS-Protection \"1; mode=block\";
+    add_header X-Content-Type-Options \"nosniff\";
+```
+
 
 - activer le fichier de configuration en créant un lien symbolique : `sudo ln -s /etc/nginx/sites-available/btspma.kevinniel.fr.conf /etc/nginx/sites-enabled/`
 - Vérifier que ça fonctionne avec `sudo nginx -t`, qui doit afficher : 
