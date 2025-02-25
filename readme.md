@@ -191,7 +191,8 @@ server {
     index index.html index.htm index.php;
 
     location / {
-        try_files \$uri \$uri/ /index.php?\$query_string;
+        # ici, pensez à virer les backslash !
+        try_files $uri $uri/ /index.php?$query_string;
     }
 
     location ~ \.php$ {
