@@ -89,6 +89,10 @@ C'est notre serveur web, qui va exécuter le code web. (c'est pareil que MAMP, W
 
 ![nginxstatus](nginxstatus.png "nginxstatus")
 
+A la fin de l'installation, si vous entrez l'ip de votre serveur dans le navigateur, vous devriez avoir un message "Welcome to Nginx" : 
+
+![welcome_nginx](welcome_nginx.png "welcome_nginx")
+
 ### Base de données
 
 - Installation de MariaDB (= MySQL) : `sudo apt install mariadb-server mariadb-client -y`
