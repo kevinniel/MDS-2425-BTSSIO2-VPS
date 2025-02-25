@@ -146,6 +146,13 @@ On va prendre le lien de téléchargement du PHP et le télécharger.
 - virer le .zip : `rm phpMyAdmin-5.2.2-all-languages.zip`
 - renommer le dossier en phpMyAdmin : `mv phpMyAdmin-5.2.2-all-languages/ phpMyAdmin`
 
+
+------------
+
+
+
+
+
 Configurer nginx pour qu'il aille lire par défaut les fichiers `.php` : `sudo nano /etc/nginx/sites-available/default`
 
 Remplacer la ligne `index index.html index.htm index.nginx-debian.html;` par `index index.html index.htm index.php index.nginx-debian.html;`
