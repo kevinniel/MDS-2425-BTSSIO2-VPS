@@ -77,3 +77,6 @@ sudo apt update && sudo apt upgrade -y
 ### Nginx
 
 - Installation : `sudo apt install nginx -y`
+- autoriser nginx : `sudo systemctl enable nginx`
+- lancer nginx : `sudo systemctl start nginx`
+- vérifier le statut de nginx : `sudo systemctl status nginx`
