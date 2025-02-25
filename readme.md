@@ -118,3 +118,7 @@ A la fin de l'installation, si vous entrez l'ip de votre serveur dans le navigat
 #### GIT
 
 `sudo apt install git -y`
+
+#### PHP & dépendances
+
+`sudo apt install php php-cli php-fpm php-mysql php-zip php-xml php-bcmath php-curl php-mbstring unzip curl -y`
