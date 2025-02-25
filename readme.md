@@ -8,6 +8,10 @@ eliane.perol.angers.mds-project.fr    31.207.38.82    H64yPZYBH7l
 - un nom de domaine si possible
 - Debian 12 vierge (installé sur le VPS)
 
+## Informations globales
+
+- Pour fermer une tâche en cours dans un terminal, il faut faire `ctrl + c`.
+
 ## Préparation à la connexion en ssh
 
 - sur windobe (putty) : https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
@@ -83,7 +87,7 @@ C'est notre serveur web, qui va exécuter le code web. (c'est pareil que MAMP, W
 - lancer nginx : `sudo systemctl start nginx`
 - vérifier le statut de nginx : `sudo systemctl status nginx`
 
-
 ### Base de données
 
-Installation de MariaDB (= MySQL) : `sudo apt install mariadb-server mariadb-client -y`
+- Installation de MariaDB (= MySQL) : `sudo apt install mariadb-server mariadb-client -y`
+
