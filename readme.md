@@ -146,6 +146,13 @@ On va prendre le lien de téléchargement du PHP et le télécharger.
 - virer le .zip : `rm phpMyAdmin-5.2.2-all-languages.zip`
 - renommer le dossier en phpMyAdmin : `mv phpMyAdmin-5.2.2-all-languages/ phpMyAdmin`
 
+### Créer un utilisateur MySQL pour accéder à phpMyAdmin
+
+- se connecter à MySQL : `mysql -u root -p`
+- créer un utilisateur : `CREATE USER 'nom_utilisateur'@'localhost' IDENTIFIED BY 'mot_de_passe';`
+- lui donner tous les droits : `GRANT ALL PRIVILEGES ON *.* TO 'nom_utilisateur'@'localhost' WITH GRANT OPTION;`
+- flush les privileges : `FLUSH PRIVILEGES; EXIT;`
+
 ## Paramétrer les DNS
 
 RDV sur votre gestionnaire de NDD, et créez autant d'entrées de type "A" que nécessaire (avec des sous-domaines par exemple) pointant vers l'adresse IP de votre serveur (laissez les paramètres par défaut !).
@@ -158,6 +165,9 @@ ATTENTION, ICI TOUS LES CODES SONT SPÉCIFIQUE À MON CAS DE FIGURE. PENSEZ À A
 - `cd /etc/nginx/sites-available`
 - créer le fichier de conf : `sudo nano btspma.kevinniel.fr.conf`
 - y place le contenu suivant, en remplacant les valeurs nécessaires (`$fulldomain`)
+
+ℹ️ `$fulldomain` correspond à l'url d'entrée dans votre application. si c'est "toto.fr", alors remplacez le par "toto.fr". Si c'est "pma.toto.fr", remplacez le par "pma.toto.fr".
+ℹ️ `$fulldomain.conf` est souvent utilisé comme nom de fichier de conf.
 
 ```
 server {
@@ -205,4 +215,10 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 - redémarrer le service nginx : `sudo service nginx restart`
 
 
-```
+
+
+
+
+
+
+
