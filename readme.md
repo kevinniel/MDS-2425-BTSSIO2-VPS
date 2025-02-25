@@ -122,3 +122,12 @@ A la fin de l'installation, si vous entrez l'ip de votre serveur dans le navigat
 #### PHP & dépendances
 
 `sudo apt install php php-cli php-fpm php-mysql php-zip php-xml php-bcmath php-curl php-mbstring unzip curl -y`
+
+#### Virer apache2 
+
+- `sudo systemctl stop apache2`
+- `sudo systemctl disable apache2`
+- `sudo apt remove --purge apache2 apache2-utils apache2-bin apache2.2-common -y`
+- `sudo rm -rf /etc/apache2`
+- `sudo apt autoremove -y`
+- `sudo apt autoclean`
