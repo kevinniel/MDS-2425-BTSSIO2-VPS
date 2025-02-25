@@ -2,7 +2,9 @@
 
 ## Prérequis
 
-- Debian 12 vierge
+- un VPS
+- un nom de domaine si possible
+- Debian 12 vierge (installé sur le VPS)
 
 ## Connexion en ssh
 
