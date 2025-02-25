@@ -1,5 +1,7 @@
 # Installation VPS
 
+eliane.perol.angers.mds-project.fr    31.207.38.82    H64yPZYBH7l
+
 ## Prérequis
 
 - un VPS
@@ -13,10 +15,23 @@
 
 ## Connexion au ssh
 
+- les users "superadmin" s'apellent en général "root".
+- Lorsque vous avez un VPS qui vient de chez OVH, il s'appelle "debian"
+
+‼️ pensez bien à adapter pour la suite, dans ce tuto, j'utiliserai "root".
+
 ### putty
 
-renseigner l'adresse IP de votre serveur dans la barre prévue à cet effet :
-
+- Ne pas toucher au port "22"
+- renseigner l'adresse IP (v4) de votre serveur dans la barre prévue à cet effet :
 ![Putty](putty.png "Putty")
 
+
 ### CLI
+
+Tapez la commande suivante : (en remplacant par vos informations petits boulets 😇)
+```
+ssh user@ip
+```
+
+![ssh_cli](ssh_cli.png "ssh_cli")
