@@ -76,3 +76,4 @@ sudo apt update && sudo apt upgrade -y
 
 ### Nginx
 
+- Installation : `sudo apt install nginx -y`
