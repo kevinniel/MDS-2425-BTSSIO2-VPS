@@ -44,7 +44,13 @@ ssh user@ip
 
 ## Configurer les raccourcis
 
-Ajouter dans le fichier `.bashrc`, à la racine de votre utilisateur (pour y accéder, tapez : `cd`)
+- Ajouter dans le fichier `.bashrc`, à la racine de votre utilisateur (pour y accéder, tapez : `cd`)
+- Éditez le fichier en tapant la commande `sudo nano .bashrc`
+
+ℹ️ `nano` est un éditeur de texte (IDE) en CLI. Le menu de navigation des commandes de nano est en bas de l'écran. Le symbole `^` correspond à votre touche de clavier "control". 
+![nano](nano.png "nano")
+
+
 
 ```
 alias c='clear'
