@@ -41,3 +41,22 @@ ssh user@ip
 ```
 
 ![ssh_cli](ssh_cli.png "ssh_cli")
+
+## Configurer les raccourcis
+
+```
+alias c='clear'
+alias l='ls'
+alias ll='ls -al'
+alias .='cd ..'
+alias ..='cd ../..'
+alias ...='cd ../../..'
+alias ....='cd ../../../..'
+alias .....='cd ../../../../..'
+alias ......='cd ../../../../../..'
+```
+
+## Installer le serveur web 
+
+### Nginx
+
