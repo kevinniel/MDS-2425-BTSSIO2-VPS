@@ -121,7 +121,11 @@ A la fin de l'installation, si vous entrez l'ip de votre serveur dans le navigat
 
 #### PHP & dépendances
 
-`sudo apt install php php-cli php-fpm php-mysql php-zip php-xml php-bcmath php-curl php-mbstring unzip curl -y`
+- `sudo apt install php php-cli php-fpm php-mysql php-zip php-xml php-bcmath php-curl php-mbstring unzip curl -y`
+- `sudo apt install php8.2-fpm -y`
+- `sudo systemctl start php8.2-fpm`
+- `sudo systemctl enable php8.2-fpm`
+- `sudo systemctl status php8.2-fpm`
 
 #### Virer apache2 
 
@@ -146,3 +150,9 @@ Configurer nginx pour qu'il aille lire par défaut les fichiers `.php` : `sudo n
 
 Remplacer la ligne `index index.html index.htm index.nginx-debian.html;` par `index index.html index.htm index.php index.nginx-debian.html;`
 Redemarrez le service nginx pour prendre en compte les modifications : `sudo service nginx restart`
+
+
+`sudo apt install php8.2-fpm -y`
+`sudo systemctl start php8.2-fpm`
+`sudo systemctl enable php8.2-fpm`
+`sudo systemctl status php8.2-fpm`
