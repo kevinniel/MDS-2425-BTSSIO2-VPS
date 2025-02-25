@@ -44,6 +44,8 @@ ssh user@ip
 
 ## Configurer les raccourcis
 
+Ajouter dans le fichier `.bashrc`, à la racine de votre utilisateur (pour y accéder, tapez : `cd`)
+
 ```
 alias c='clear'
 alias l='ls'
