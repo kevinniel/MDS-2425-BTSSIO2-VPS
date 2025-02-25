@@ -146,6 +146,64 @@ On va prendre le lien de téléchargement du PHP et le télécharger.
 - virer le .zip : `rm phpMyAdmin-5.2.2-all-languages.zip`
 - renommer le dossier en phpMyAdmin : `mv phpMyAdmin-5.2.2-all-languages/ phpMyAdmin`
 
+## Paramétrer les DNS
+
+RDV sur votre gestionnaire de NDD, et créez autant d'entrées de type "A" que nécessaire (avec des sous-domaines par exemple) pointant vers l'adresse IP de votre serveur (laissez les paramètres par défaut !).
+
+## Configurer nginx pour qu'il renvoi le bon site sur la bonne URL
+
+Les fichiers de configurations nginx sont dans le dossier `/etc/nginx/sites-available`
+ATTENTION, ICI TOUS LES CODES SONT SPÉCIFIQUE À MON CAS DE FIGURE. PENSEZ À ADAPTER À VOTRE SITUATION.
+
+- `cd /etc/nginx/sites-available`
+- créer le fichier de conf : `sudo nano btspma.kevinniel.fr.conf`
+- y place le contenu suivant, en remplacant les valeurs nécessaires (`$fulldomain`)
+
+```
+server {
+    # défini le nom de domain à partir duquel le fichier de conf doit être pris en compte
+    server_name $fulldomain;
+    # chemin qu'on doit exécuter quand ce fichier de conf est appelé
+    root /var/www/html/$fulldomain;
+
+    access_log  /var/log/nginx/$fulldomain.access.log;
+    error_log  /var/log/nginx/$fulldomain.error.log;
+
+    fastcgi_buffers 16 16k;
+    fastcgi_buffer_size 32k;
+
+    # Security / XSS Mitigation Headers
+    add_header X-Frame-Options \"SAMEORIGIN\";
+    add_header X-XSS-Protection \"1; mode=block\";
+    add_header X-Content-Type-Options \"nosniff\";
+
+    index index.html index.htm index.php;
+
+    location / {
+        try_files \$uri \$uri/ /index.php?\$query_string;
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME \$realpath_root\$fastcgi_script_name;
+        include fastcgi_params;
+    }
+
+    location ~ /\.(?!well-known).* {
+        deny all;
+    }
+
+}
+
+- activer le fichier de configuration en créant un lien symbolique : `ln -s btspma.kevinniel.fr.conf ../sites-enabled/`
+
+
+
+```
+
+
+
 
 ------------
 
@@ -157,9 +215,3 @@ Configurer nginx pour qu'il aille lire par défaut les fichiers `.php` : `sudo n
 
 Remplacer la ligne `index index.html index.htm index.nginx-debian.html;` par `index index.html index.htm index.php index.nginx-debian.html;`
 Redemarrez le service nginx pour prendre en compte les modifications : `sudo service nginx restart`
-
-
-`sudo apt install php8.2-fpm -y`
-`sudo systemctl start php8.2-fpm`
-`sudo systemctl enable php8.2-fpm`
-`sudo systemctl status php8.2-fpm`
