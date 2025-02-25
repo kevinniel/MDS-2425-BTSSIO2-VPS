@@ -112,3 +112,9 @@ A la fin de l'installation, si vous entrez l'ip de votre serveur dans le navigat
 - ℹ️ pour quitter l'interface "mysql", tapez la commande : `exit;`
 
 ![mariatest](mariatest.png "mariatest")
+
+### Installer les dépendances nécessaires
+
+#### GIT
+
+`sudo apt install git -y`
