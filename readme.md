@@ -102,4 +102,9 @@ A la fin de l'installation, si vous entrez l'ip de votre serveur dans le navigat
 ℹ️ Lorsqu'il n'y a rien sur les screens en dessous, c'est qu'il ne faut rien mettre 😇
 
 ![msqli1](msqli1.png "msqli1")
-![msqli2](msqli2.png "msqli1")
+![msqli2](msqli2.png "msqli2")
+
+ℹ️ Pour tester si l'installation de MariaDB s'est exécutée correctement, il faut s'y connecter avec la commande : `mysql -u root -p`.
+‼️ Il faut bien utiliser ici "root", et non debian ou autre. Il s'agit de l'utilisateur base de donnée et non celui de votre machine.
+
+![mariatest](mariatest.png "mariatest")
