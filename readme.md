@@ -92,4 +92,5 @@ C'est notre serveur web, qui va exécuter le code web. (c'est pareil que MAMP, W
 ### Base de données
 
 - Installation de MariaDB (= MySQL) : `sudo apt install mariadb-server mariadb-client -y`
+- Sécuriser la BDD : `sudo mysql_secure_installation`
 
