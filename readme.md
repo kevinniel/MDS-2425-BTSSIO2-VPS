@@ -185,9 +185,9 @@ server {
     fastcgi_buffer_size 32k;
 
     # Security / XSS Mitigation Headers
-    add_header X-Frame-Options \"SAMEORIGIN\";
-    add_header X-XSS-Protection \"1; mode=block\";
-    add_header X-Content-Type-Options \"nosniff\";
+    # add_header X-Frame-Options \"SAMEORIGIN\";
+    # add_header X-XSS-Protection \"1; mode=block\";
+    # add_header X-Content-Type-Options \"nosniff\";
 
     # Ordre dans lequel nginx va aller chercher à exécuter les fichiers si existants
     # dans le dossier dans lequel on a pointé
