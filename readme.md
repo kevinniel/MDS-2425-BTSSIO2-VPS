@@ -219,6 +219,7 @@ server {
     add_header X-Content-Type-Options \"nosniff\";
 ```
 
+ℹ️ Si vous avez une erreur "File not found.", alors que vous êtes sûr à 100% d'avoir tout bien fait correctement, remplacez dans votre fichier de configuration la ligne `fastcgi_param SCRIPT_FILENAME \$realpath_root\$fastcgi_script_name;` par `fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;`
 
 - activer le fichier de configuration en créant un lien symbolique : `sudo ln -s /etc/nginx/sites-available/btspma.kevinniel.fr.conf /etc/nginx/sites-enabled/`
 - Vérifier que ça fonctionne avec `sudo nginx -t`, qui doit afficher : 
@@ -291,7 +292,6 @@ Si jamais cela ne se déclenche pas et que vous êtes sûr à 100% des valeurs d
 3. Gérer les domaines / sous-domaines sur vos DNS (OVH)
 4. Tu vas cloner ton repo dans le nouveau dossier
 
-
 ## Erreurs communes
 
 - Vérifiez que votre fichier de config nginx ait bien un nom se terminant par ".conf"
@@ -303,3 +303,11 @@ Si jamais cela ne se déclenche pas et que vous êtes sûr à 100% des valeurs d
 - Déployer phpMyAdmin avec HTTPS
 - Déployer votre portfolio avec HTTPS
 - Déployer l'application Laravel avec HTTPS
+
+
+
+
+
+
+
+
