@@ -227,9 +227,10 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
 - redémarrer le service nginx : `sudo service nginx restart`
 
+## Mise en place du HTTPS
 
-
-
+- Installation de certbot : `sudo apt install certbot python3-certbot-nginx -y`
+- Génération du certificat SSL : `sudo certbot --nginx -d NOM_DE_DOMAINE`
 
 
 
