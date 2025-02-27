@@ -284,6 +284,12 @@ Vous devriez maintenant avoir le déploiement se faire dans l'onglet "Actions" d
 
 Si jamais cela ne se déclenche pas et que vous êtes sûr à 100% des valeurs de vos secrets, allez vérifier dans l'onglet "Settings -> Actions -> General" que la première ligne "Allow all actions and reusable workflows" est bien sélectionnée.
 
+## Etapes globales pour refaire un déploiement 🚀
+
+1. créer le dossier dans `/var/www/html` qui accueillera le projet (`mkdir NOM_DOSSIER`).
+2. Créer le fichier de conf NGINX qui pointera vers le nouveau dossier
+3. Gérer les domaines / sous-domaines sur vos DNS (OVH)
+4. Tu vas cloner ton repo dans le nouveau dossier
 
 
 ## Erreurs communes
