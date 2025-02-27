@@ -235,8 +235,10 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 
 ## Pour déployer une application à partir de git
 
+**Prérequis** : Vous devez avoir un dossier créé dans `/var/www/html`, avec la conf nginx en place pour pouvoir faire un déploiement depuis GIT.
+
 - Vérifiez que GIT est bien installé : `git --version`
-- Rendez-vous dans le dossier où vous souhaitez déployer votre application. Pour créer un dossier dans le dossier `/var/www/html`, rendez-vous là-bas, et entrez la commande `mkdir NOM_DOSSIER`. Pour la suite, n'oubliez pas de vous positionner dans le dossier nouvellement créé.
+- Rendez-vous dans le dossier où vous souhaitez déployer votre application. 
 - Exécutez la commande `sudo git clone URL .`
 ℹ️ Attention à bien mettre le `.` a la fin de la ligne pour que cela clone le repository dans le dossier courant, et que cela ne crée pas un nouveau dossier
 - Vous pourrez ensuite tout mettre à jour en faisant un simple `sudo git pull` !
