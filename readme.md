@@ -174,7 +174,8 @@ ATTENTION, ICI TOUS LES CODES SONT SPÉCIFIQUE À MON CAS DE FIGURE. PENSEZ À A
 server {
     # défini le nom de domain à partir duquel le fichier de conf doit être pris en compte
     server_name $fulldomain;
-    # chemin qu'on doit exécuter quand ce fichier de conf est appelé
+    # chemin qu'on doit exécuter quand ce fichier de conf est appelé.
+    # Attention, on doit pointer vers un dossier, et non un fichier
     root /var/www/html/$fulldomain;
 
     access_log  /var/log/nginx/$fulldomain.access.log;
@@ -188,6 +189,8 @@ server {
     add_header X-XSS-Protection \"1; mode=block\";
     add_header X-Content-Type-Options \"nosniff\";
 
+    # Ordre dans lequel nginx va aller chercher à exécuter les fichiers si existants
+    # dans le dossier dans lequel on a pointé
     index index.html index.htm index.php;
 
     location / {
