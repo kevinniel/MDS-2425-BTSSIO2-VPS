@@ -238,4 +238,8 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 - Vérifier que dans votre fichier de conf, la route de la ligne "root" pointe bien vers un dossier. Et que ce dossier contienne bien un fichier "index.html" ou "index.php"
 
 
+## TODO
 
+- Déployer phpMyAdmin avec HTTPS
+- Déployer votre portfolio avec HTTPS
+- Déployer l'application Laravel avec HTTPS
