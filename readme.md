@@ -232,7 +232,10 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 - Installation de certbot : `sudo apt install certbot python3-certbot-nginx -y`
 - Génération du certificat SSL : `sudo certbot --nginx -d NOM_DE_DOMAINE`
 
+## Erreurs communes
 
+- Vérifiez que votre fichier de config nginx ait bien un nom se terminant par ".conf"
+- Vérifier que dans votre fichier de conf, la route de la ligne "root" pointe bien vers un dossier. Et que ce dossier contienne bien un fichier "index.html" ou "index.php"
 
 
 
