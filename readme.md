@@ -209,6 +209,7 @@ server {
         deny all;
     }
 }
+```
 
 ℹ️ Si vous avez une erreur du type "unknown directive mode=block", commentez ou supprimez le bloc suivant du fichier de conf nginx : 
 ```
@@ -231,6 +232,54 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 
 - Installation de certbot : `sudo apt install certbot python3-certbot-nginx -y`
 - Génération du certificat SSL : `sudo certbot --nginx -d NOM_DE_DOMAINE`
+
+## Pour déployer une application à partir de git
+
+- Vérifiez que GIT est bien installé : `git --version`
+- Rendez-vous dans le dossier où vous souhaitez déployer votre application
+
+## pour automatiser le déploiement
+
+- Créer un dossier `.github` à la racine de votre projet
+- Créer un dossier `workflows` dans le dossier `.github`
+- Créer un fichier `ci.yml` dans le dossier `workflows`
+
+Vous devriez arriver à ce chemin : `.github/workflows/ci.yml`
+
+Renseignez ce contenu dans le fichier `ci.yml` : 
+
+```
+name: CI
+
+on: [push]
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Push to server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            cd ${{ secrets.PROJECT_PATH }}
+            sudo git pull
+```
+
+Allez paramétrer les 4 variables "secrets" dans github : 
+- Allez dans l'onglet "settings" de votre repository
+- Allez dans "Secrets and Variables", puis "actions"
+- Cliquez sur "New repository secret" et renseignez les bonnes valeurs
+
+Vous devriez maintenant avoir le déploiement se faire dans l'onglet "Actions" de votre repository.
+
+Si jamais cela ne se déclenche pas et que vous êtes sûr à 100% des valeurs de vos secrets, allez vérifier dans l'onglet "Settings -> Actions -> General" que la première ligne "Allow all actions and reusable workflows" est bien sélectionnée.
+
+
 
 ## Erreurs communes
 
